@@ -1,0 +1,134 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="CONTENT-TYPE" content="text/html; charset=utf-8">
+	<title>CSC 376 Distributed Systems -- Programming Exercise</title>	
+	<style type="text/css">
+	p {
+		margin-bottom: 6px;
+		margin-top: 6px;
+		font-size: 16pt;
+	}
+	.dashed_gray_border {
+		border: 2px dashed gray;
+	}
+	.dashed_gray_box {
+		border: 2px dashed gray;
+		background-color: #efefef;
+		padding-left: 10px;
+	}			
+	.centered_dashed_gray_box {
+		border: 2px dashed gray;
+		background-color: #efefef;
+		text-align: center;
+	}			
+	#table_of_contents {
+		border: 2px dashed gray;
+		border-bottom: none;
+		background: #efefef;
+		margin: 0px;
+		margin-top: 20px;
+		padding-left: 10px;
+	}
+	#contents_list {
+		border: 2px dashed gray;
+		padding: 10px;
+		padding-left: 20px;
+	}
+	h4#header {
+		border: 2px dashed gray;
+		font-size: 2em;
+		font-weight: bold;
+		color: black;
+		background: #efefef;
+		margin-bottom: 0px;
+		padding-left: 10px;
+	}
+	li {
+		margin-top: 10px;
+		font-size: 16pt;
+	}
+	pre {
+		font-size: 16pt;
+		font-weight: bold;
+		color: #000080;
+		border: 1px solid gray;
+		padding: 10px;
+		background: #efefff;	
+		tab-size: 3;
+	}
+	dt {
+		font-weight: bold;
+	}
+	th {
+		font-size: 16pt;
+	}
+	td {
+		font-size: 16pt;
+	}
+	td.bold_right {
+		font-weight: bold;
+		text-align: right;
+	}
+	</style>
+</head>
+<body dir="ltr" lang="en-US">
+	<div class="centered_dashed_gray_box">
+		<h1><a name="CourseTitle"></a>CSC 376 Distributed Systems</h1>
+		<h2><a name="CourseQuarter"></a><i>Spring 2016-2017</i></h2>
+		<h3><a name="Lecturer"></a><i>Karen Heart, Instructor</i></h3>
+		<h3><a name="Title"></a>Programming Exercise</h3>
+	</div>
+	<h1 class="dashed_gray_box">Direct Messenger with File Transfers</h1>	
+	<p><b>Due: Wed., May 31, at 10:10am</b></p>
+	<ul>
+		<li><h2>Functionality</h2>
+		<p>You are to create an enhanced direct messenger program. In particular, the program will perform as follows:</p>
+			<ol>				
+			<li>It must behave as either a client or a server, depending on the command line arguments supplied when started.</li>
+			<li>In addition to transmitting and receiving messages, the program will also transfer files using a binary transfer method, meaning that all of the bytes of a file will be transmitted exactly as is.</li>
+			<li>Because the program must also transfer files, it will listen for file transfer requests. Consequently, the program must contain a server to listen for file requests.</li>
+			<li>For purposes of this exercise, you may hard-code your program to connect to localhost.</li>
+			<li>Once the client and server messengers are connected, either end can send messages, at will, in utf-8 format to the other end.</li>
+			<li>Messages must be provided to the program using standard input.</li>
+			<li>Immediately after receiving a message, the program must output the message to standard output.</li>
+			<li>A user may request a file from the other endpoint at any time. The user must supply the name of the requested file using standard input.</li>
+			<li>When the other end receives a file transfer request, it must immediately send all of the bytes in the file to the other end. If the file cannot be found or read, the program may simply ignore the request but it may <b>not</b> terminate.</li>
+			<li>When the requesting program receives the file bytes, it must store them in a file with the same name locally.</li>
+			<li>The user may terminate the program by closing standard input.</li>
+			<li>The program is terminated by first shutting down sending, then closing the socket. Once one end shuts down, the other side will receive a zero-length message, informing it of the shut down. The other side must then shut down immediately.</li>
+			</ol></li>
+		<li><h2>Usage</h2>
+			<ul>
+			<li>The program must be started with the <code>-l</code> option, which is the socket its server will listen on.</li>
+			<li>If the program is to act as a client, two more options may be used. An <code>-s</code> option specifies the address of the server to connect to, and <code>-p</code> specifies the port number of the server to connect to. If the <code>-s</code> option is not used, then the program connects to <code>localhost</code>.</li>
+			<li>Usage as a server:
+				<ul>
+				<li>Python:
+<pre>
+$> python messenger.py -l &lt;listening port number&gt; 
+</pre></li>
+				<li>Java:
+<pre>
+$> java Messenger -l &lt;listening port number&gt; 
+</pre></li>
+				</ul></li>
+			<li>Usage as a client:
+				<ul>
+				<li>Python:
+<pre>
+$> python messenger.py -l &lt;listening port number&gt; [-s] [connect server address] -p &lt;connect server port&gt;
+</pre></li>
+				<li>Java:
+<pre>
+$> java Messenger -l &lt;listening port number&gt; [-s] [connect server address] -p &lt;connect server port&gt;
+</pre></li>
+				</ul></li>				
+			</ul></li>
+		<li><h2>Submission</h2>
+		<p><b>SUBMIT ONLY THE FOLLOWING TO THE DROPBOX ON D2L; ALL OTHER SUBMISSIONS WILL BE IGNORED:</p>
+			<ol>
+			<li>your .py or .java source files</li>
+			</ol></b></li>
+	</ul>
+</body></html>

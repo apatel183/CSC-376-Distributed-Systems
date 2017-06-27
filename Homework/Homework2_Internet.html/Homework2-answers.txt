@@ -1,0 +1,25 @@
+Answers to Homework 2
+CSC 376
+Karen Heart
+Spring 2017
+
+1. An internetwork
+2. Open Systems Interconnection (OSI) Reference model
+3. TCP and UDP
+4. IANA. ICANN.
+5. Classless Inter-Domain Routing. It is used to designate ranges of IP addresses.
+6. Domain Name System (DNS)
+7. Top Level Domain, which is the lowest level of the DNS system. DePaul's TDL is "edu".
+8. authoritative name server
+9. Autonomous Systems (AS'es)
+10. traceroute (tracert, on Windows)
+11. version 4 (IPv4)
+12. 4 bytes
+13. source address and destination address
+14. a transport packet
+15. 3 way handshake
+16. connection management, reliability, and flow control
+17. TCP sends a stream of bytes, it does not maintain message boundaries.
+18. source port and destination port
+19. a) when performance is more important than completeness, b) short messages
+20. UDP

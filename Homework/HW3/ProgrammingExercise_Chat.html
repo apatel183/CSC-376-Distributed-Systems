@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="CONTENT-TYPE" content="text/html; charset=utf-8">
+	<title>CSC 376 Distributed Systems -- Programming Exercise</title>	
+	<style type="text/css">
+	p {
+		margin-bottom: 6px;
+		margin-top: 6px;
+		font-size: 16pt;
+	}
+	.dashed_gray_border {
+		border: 2px dashed gray;
+	}
+	.dashed_gray_box {
+		border: 2px dashed gray;
+		background-color: #efefef;
+		padding-left: 10px;
+	}			
+	.centered_dashed_gray_box {
+		border: 2px dashed gray;
+		background-color: #efefef;
+		text-align: center;
+	}			
+	#table_of_contents {
+		border: 2px dashed gray;
+		border-bottom: none;
+		background: #efefef;
+		margin: 0px;
+		margin-top: 20px;
+		padding-left: 10px;
+	}
+	#contents_list {
+		border: 2px dashed gray;
+		padding: 10px;
+		padding-left: 20px;
+	}
+	h4#header {
+		border: 2px dashed gray;
+		font-size: 2em;
+		font-weight: bold;
+		color: black;
+		background: #efefef;
+		margin-bottom: 0px;
+		padding-left: 10px;
+	}
+	li {
+		margin-top: 10px;
+		font-size: 16pt;
+	}
+	pre {
+		font-size: 16pt;
+		font-weight: bold;
+		color: #000080;
+		border: 1px solid gray;
+		padding: 10px;
+		background: #efefff;	
+		tab-size: 3;
+	}
+	dt {
+		font-weight: bold;
+	}
+	th {
+		font-size: 16pt;
+	}
+	td {
+		font-size: 16pt;
+	}
+	td.bold_right {
+		font-weight: bold;
+		text-align: right;
+	}
+	</style>
+</head>
+<body dir="ltr" lang="en-US">
+	<div class="centered_dashed_gray_box">
+		<h1><a name="CourseTitle"></a>CSC 376 Distributed Systems</h1>
+		<h2><a name="CourseQuarter"></a><i>Spring 2016-2017</i></h2>
+		<h3><a name="Lecturer"></a><i>Karen Heart, Instructor</i></h3>
+		<h3><a name="Title"></a>Programming Exercise</h3>
+	</div>
+	<h1 class="dashed_gray_box">Chat</h1>	
+	<p><b>Due: Wed., Apr. 26, at 10:10am</b></p>
+	<ul>
+		<li><h2>Functionality</h2>
+		<p>You are to create a chat system. In particular, you will create a chat client and a chat server. You may use your Direct Messenger code as a base for this project, although you will have to revise that code significantly. Notably, the client and the server must be separate programs. Your system will perform as follows:</p>
+			<ol>				
+			<li>The server will listen for connections from clients.</li>
+			<li>Once a client is connected, it can send messages to the server. It will also receive from the server all messages sent from the other connected clients.</li>
+			<li>Messages must be sent in utf-8 format.</li>
+			<li>Messages must be provided to the client using standard input.</li>
+			<li>Immediately after receiving a message, the server must forward the message to all connected clients, except for the client that sent the message. <b>DO NOT SEND THE MESSAGE BACK TO THE ORIGINATING CLIENT!</b></li>
+			<li>Once it receives a message, the client will write the message to standard output.</li>
+			<li>When a client closes its socket, the server will remove that client from its list, but the server will continue to run and the other connected clients will be able to continue exchanging messages.</li>
+			</ol></li>
+		<li><h2>Usage</h2>
+			<ul>
+			<li>Follow the same usage as described for the Direct Messenger.</li>
+			</ul></li>
+		<li><h2>Submission</h2>
+		<p><b>SUBMIT ONLY THE FOLLOWING TO THE DROPBOX ON D2L; ALL OTHER SUBMISSIONS WILL BE IGNORED:</p>
+			<ol>
+			<li>your .py or .java source files</li>
+			<li>the URL of your YouTube video explaining each line of your source code</li>
+			</ol></b></li>
+	</ul>
+</body></html>

@@ -1,0 +1,26 @@
+Answers to Homework 1
+CSC 376
+Karen Heart
+Spring 2017
+
+1. ipconfig (or ifconfig, on Unix)
+
+2. It looks up the IP address for a host name.
+
+3. The netstat command provides information about network activity on a computer.
+
+4. If successful, then you know that the host (computer) is running. If unsuccessful, the host may not be up, or ping is either turned off or prohibited by a firewall.
+
+5. Local Area Network. A LAN is a network that connects nearby hosts directly.
+
+6. A Network Interface Controller, also known as a NIC card. A cable, such as an Ethernet cable, may also be needed to connect the NIC to the network.
+
+7. Hubs (also known as repeaters) and switches. A hub simply repeats the signal coming from one cable to all other attached cables, while a switch determines which cable to retransmit a signal to.
+
+8. Address Resolution Protocol (ARP). It maps a conceptual address, such as an IP address, to a hardware address, such as a MAC address.
+
+9. Dynamic Host Configuration Protocol (DHCP).
+
+10. It is a static IP.
+
+11. Promiscuous mode permits a NIC to read all incoming network packets, regardless of their MAC destinations. It is used by network sniffer tools to diagnose network problems.
